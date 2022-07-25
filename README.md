@@ -22,7 +22,7 @@ Android NDK 25...
 build crate `game` with feature `desktop`
 
 ```bash
-cargo run --features=duel/desktop gametest
+cargo run --features=duel/desktop --bin gametest
 ```
 
 
