@@ -1,0 +1,19 @@
+
+
+
+[package]
+name = "audio_engine"
+version = "0.0.1"
+edition = "2021"
+
+
+
+[dependencies]
+anyhow = "~1.0.58"
+cpal = "~0.13.5"
+gcd = "~2.1.0"
+hound = "~3.4.0"
+lewton = "~0.10.2"
+log = "~0.4.17"
+
+
