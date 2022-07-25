@@ -1,0 +1,44 @@
+
+
+
+[package]
+name = "duel"
+version = "0.0.0"
+edition = "2021"
+
+
+
+[dependencies]
+log = "~0.4.17"
+pollster = "~0.2.5"
+wgpu = { git = "https://github.com/gfx-rs/wgpu", rev = "537c6bed4e579a5cd99196ad4d3b1b952455d08a" }
+winit = { git = "https://github.com/rib/winit", rev = "6b57e4ea7d2c2dbdd1d2eb33895f77f97644e5c9" }
+audio_engine = { path = "../audio_engine" }
+
+[target.'cfg(not(target_os = "android"))'.dependencies]
+env_logger = "0.9.0"
+
+[target.'cfg(target_os = "android")'.dependencies]
+android_logger = "0.11.0"
+android-activity = { git = "https://github.com/rib/android-activity", features = [ "game-activity" ] }
+
+
+
+[features]
+default = []
+desktop = []
+
+
+
+[lib]
+name="main"
+crate_type=["cdylib"]
+
+
+
+[[bin]]
+path="src/lib.rs"
+name="gametest"
+required-features = [ "desktop" ]
+
+
