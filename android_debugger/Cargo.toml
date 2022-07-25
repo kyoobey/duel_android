@@ -1,0 +1,12 @@
+[package]
+name = "android_debugger"
+version = "0.0.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "*"
+clappers = "~2.0.3"
+lazy_static = "*"
+log = "*"
+regex = "~1.6.0"
+simple_logger = { version = "*", features = [ "colors" ], default-features = false }
