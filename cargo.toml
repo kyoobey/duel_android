@@ -1,0 +1,17 @@
+
+
+
+[workspace]
+resolver = "2"
+
+members = [
+
+	"audio_engine",
+
+	"game",
+	"android_debugger",
+	"playground"
+
+]
+
+
