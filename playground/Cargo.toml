@@ -1,0 +1,17 @@
+[package]
+name = "playground"
+version = "0.0.0"
+edition = "2021"
+
+[dependencies]
+log = "~0.4.17"
+simple_logger = { version = "~2.2.0", default-features = false, features = ["colors"] }
+audio_engine = { path = "../audio_engine" }
+
+[[bin]]
+name="audio_engine_blah1"
+path="src/audio_engine_tests/blah1/blah1.rs"
+
+[[bin]]
+name="audio_engine_blah1_effects"
+path="src/audio_engine_tests/blah1/blah2.rs"
